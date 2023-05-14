@@ -1,0 +1,60 @@
+﻿<Window
+    x:Class="WpfAppSber1.View.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfAppSber1.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:WpfAppSber1.ViewModel"
+    Title="MainWindow"
+    Width="350"
+    Height="500"
+    mc:Ignorable="d">
+    <!--<Window.DataContext>
+        <vm:MainViewModel />
+    </Window.DataContext>-->
+    <Grid>
+        <TabControl>
+            <TabItem Header="First">
+                <StackPanel Width="300" HorizontalAlignment="Left">
+                    <TextBox
+                        x:Name="inputTextBox"
+                        Margin="5,5,0,0"
+                        Text="{Binding InputValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    <TextBox
+                        x:Name="fiboTextBox"
+                        Margin="5,5,0,0"
+                        IsEnabled="False"
+                        Text="{Binding FiboCutoff, Mode=OneWay}" />
+                    <TextBox
+                        x:Name="fiboSumTextBox"
+                        Margin="5,5,0,10"
+                        IsEnabled="False"
+                        Text="{Binding FiboSum, Mode=OneWay}" />
+                    <Button Command="{Binding CalculateCommand}" Content="Вычислить" />
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Second">
+                <StackPanel>
+                    <TextBox
+                        Height="150"
+                        AcceptsReturn="True"
+                        Text="{Binding InputText}"
+                        VerticalScrollBarVisibility="Visible" />
+                    <TextBox
+                        Height="150"
+                        AcceptsReturn="True"
+                        IsReadOnly="True"
+                        Text="{Binding LongWords, Mode=TwoWay}"
+                        VerticalScrollBarVisibility="Auto" />
+                    <Button
+                        Margin="0,5,0,5"
+                        Command="{Binding SaveCommand}"
+                        Content="Сохранить 2 поле в txt" />
+                    <Button Command="{Binding OpenCommand}" Content="Вставить в 1 поле txt" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
