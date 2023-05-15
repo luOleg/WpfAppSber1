@@ -52,6 +52,7 @@
                         Command="{Binding SaveCommand}"
                         Content="Сохранить 2 поле в txt" />
                     <Button Command="{Binding OpenCommand}" Content="Вставить в 1 поле txt" />
+                    <Button Content="Пустая" />
                 </StackPanel>
             </TabItem>
         </TabControl>

@@ -82,7 +82,7 @@ namespace WpfAppSber1.ViewModel
             set
             {
                 _longWords = value;
-                OnPropertyChanged(LongWords);
+                OnPropertyChanged();
             }
         }
         private void ExecuteOpenCommand()
