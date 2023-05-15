@@ -43,7 +43,7 @@ namespace WpfAppSber1.ViewModel
                 if (value < 0) value = 0;
                 if (value > 10) value = 10;
                 _inputValue = value;
-                OnPropertyChanged("InputValue");
+                OnPropertyChanged();
             }
         }
         public string FiboCutoff
@@ -52,7 +52,7 @@ namespace WpfAppSber1.ViewModel
             private set
             {
                 _fiboCutoff = value;
-                OnPropertyChanged("FiboCutoff");
+                OnPropertyChanged();
             }
 
         }
@@ -62,7 +62,7 @@ namespace WpfAppSber1.ViewModel
             private set
             {
                 _fiboSum = value;
-                OnPropertyChanged("FiboSum");
+                OnPropertyChanged();
             }
 
         }
